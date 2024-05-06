@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <img mat-card-avatar
+            src="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-hat-and-cooking-logo-png-image_6136205.png"
+            alt="">
+        <mat-card-title> {{recipe.user.fullname}} </mat-card-title>
+        <mat-card-subtitle> {{recipe.title}} </mat-card-subtitle>
+    </mat-card-header>
+    <img class="max-h-[400px] object-cover object-center" mat-card-image [src]="recipe.image">
+    <mat-card-content>
+        <p>
+            {{recipe.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-around">
+        <div>
+            <button mat-icon-button aria-label="Example icon button with a home icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button (click)="handleOpenEditRecipeForm()" mat-icon-button
+                aria-label="Example icon button with a home icon">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button aria-label="Example icon button with a home icon">
+                <mat-icon>share</mat-icon>
+
+            </button>
+            <button mat-icon-button aria-label="Example icon button with a home icon" (click)="handleDeleteRecipe()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card-actions>
+</mat-card>

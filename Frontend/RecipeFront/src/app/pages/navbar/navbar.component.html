@@ -1,0 +1,20 @@
+<p>
+    <mat-toolbar color="primary" class="flex items-center justify-between">
+        <div>
+            <span>My App</span>
+        </div>
+
+        <div>
+            <span class="example-spacer"></span>
+
+            @if (user!=null) {
+            <button mat-button>
+                {{user.fullname}}
+            </button>
+            }
+            <button mat-button (click)="hangleLogout()">
+                Logout
+            </button>
+        </div>
+    </mat-toolbar>
+</p>

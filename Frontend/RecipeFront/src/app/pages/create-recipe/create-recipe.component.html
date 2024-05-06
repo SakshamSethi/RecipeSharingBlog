@@ -1,0 +1,44 @@
+<form class="w-[27rem] p-6 rounded-lg shadow-md" (ngSubmit)="onSubmit()">
+
+    <div class="mb-4">
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">Title</mat-label>
+            <input matInput placeholder="title..." [(ngModel)]="recipeItem.title" value="" name="title"
+                class="py-2 px-3 text-gray-200 mt-1  focus:shadow-outline">
+        </mat-form-field>
+
+    </div>
+    <div class="mb-4">
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">Description</mat-label>
+            <input matInput placeholder="description.." [(ngModel)]="recipeItem.description" value="" name="description"
+                class="py-2 px-3 text-gray-200 mt-1  focus:shadow-outline">
+        </mat-form-field>
+
+    </div>
+    <div class="mb-4">
+
+        <mat-form-field class="w-full">
+            <mat-label class="text-gray-200">Image Url</mat-label>
+            <input matInput placeholder="image url.." [(ngModel)]="recipeItem.image" value="" name="image"
+                class="py-2 px-3 text-gray-200 mt-1  focus:shadow-outline">
+        </mat-form-field>
+
+    </div>
+    <div class="mb-4">
+
+        <mat-radio-group aria-label="Foot Type" name="food_type" [(ngModel)]="recipeItem.foodType">
+            <mat-radio-button value="veg">Vegetarian</mat-radio-button>
+            <mat-radio-button value="non_veg">Non Vegetarian</mat-radio-button>
+        </mat-radio-group>
+
+    </div>
+
+    <div>
+        <button mat-raised-button color="primary" type="submit">
+            Create
+        </button>
+    </div>
+</form>
